@@ -1,5 +1,6 @@
 output "sql_server_fqdn" {
-  value = azurerm_mssql_server.this.fully_qualified_domain_name
+  value       = azurerm_mssql_server.this.fully_qualified_domain_name
+  description = "sql server fqdn"
 }
 
 output "sql_connection_string" {
