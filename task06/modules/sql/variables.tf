@@ -21,7 +21,6 @@ variable "sql_admin_username" {
 variable "sql_admin_password" {
   description = "The admin password for the SQL Server"
   type        = string
-  sensitive   = true
 }
 
 variable "firewall_rules" {
