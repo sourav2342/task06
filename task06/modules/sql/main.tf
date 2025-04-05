@@ -21,7 +21,6 @@ resource "azurerm_mssql_database" "this" {
   name        = var.database_name
   server_id   = azurerm_mssql_server.this.id
   sku_name    = var.sql_sku
-  collation   = "SQL_Latin1_General_CP1_CI_AS"
   max_size_gb = 5
   tags        = var.tags
 }

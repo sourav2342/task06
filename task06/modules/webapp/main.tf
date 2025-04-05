@@ -29,5 +29,6 @@ resource "azurerm_linux_web_app" "this" {
     value = var.sql_connection_string
   }
 
+
   tags = var.tags
 }
