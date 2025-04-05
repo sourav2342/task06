@@ -21,7 +21,12 @@ resource "azurerm_linux_web_app" "this" {
 
   app_settings = {
     "WEBSITE_RUN_FROM_PACKAGE" = "1"
-    "SQL_CONNECTION_STRING"    = var.sql_connection_string
+  }
+
+  connection_string {
+    name  = "SQL_CONNECTION_STRING"
+    type  = "SQLAzure"
+    value = var.sql_connection_string
   }
 
   tags = var.tags
